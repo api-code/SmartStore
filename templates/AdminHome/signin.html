@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome User to Signin page of SmartStore</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username..." class="form-control">
+        <input type="password" name="password" placeholder="Password..." class="form-control" >
+
+        <br>
+        <input class="btn login_btn" type="submit" value="Login">
+    </form>
+
+    {% for message in message %}
+        <p id="message">{{message}}</p>
+    {% endfor %}
+
+    <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+            Don't have an account? <a href="{% url 'signUp' %}" class="ml-2">Sign Up</a>
+        </div>
+    <!-- {{form}} -->
+</body>
+</html>

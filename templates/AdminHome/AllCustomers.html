@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css"></style>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="{% static '\Js\customer.js' %}"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Customers</h1>
+
+    <!-- <table id="custo" class="display" style="width: 100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </tfoot>
+    </table> -->
+
+    <!-- this is used to load data from django admin using django tables -->
+    {% load django_tables2 %}
+    {% render_table table %}
+
+    
+</body>
+</html>
